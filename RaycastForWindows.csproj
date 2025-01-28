@@ -1,0 +1,55 @@
+<!-- RaycastForWindows.csproj -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>RaycastForWindows</RootNamespace>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+</PropertyGroup>
+
+  <ItemGroup>
+    <!-- References -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+    <PackageReference Include="System.Data.OleDb" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Models -->
+    <Compile Include="Models\Card.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Services -->
+    <Compile Include="Services\CardService.cs" />
+    <Compile Include="Services\GlobalShortcutService.cs" />
+    <Compile Include="Services\SearchService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- ViewModels -->
+    <Compile Include="ViewModels\CardViewerViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\RelayCommand.cs" />
+    <Compile Include="ViewModels\SearchViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Views -->
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Views\MainWindow.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Resources -->
+    <None Include="Assets\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Data\**\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

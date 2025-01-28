@@ -1,0 +1,6 @@
+C:\Users\rokur\Desktop\New folder (2)\obj\Debug\net6.0-windows\RaycastForWindows.csproj.AssemblyReference.cache
+C:\Users\rokur\Desktop\New folder (2)\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+C:\Users\rokur\Desktop\New folder (2)\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\rokur\Desktop\New folder (2)\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\rokur\Desktop\New folder (2)\obj\Debug\net6.0-windows\RaycastForWindows_MarkupCompile.cache
+C:\Users\rokur\Desktop\New folder (2)\obj\Debug\net6.0-windows\RaycastForWindows_MarkupCompile.lref
