@@ -1,0 +1,12 @@
+[
+  {
+    "Name": "Test Tarot Card 1",
+    "Appearance": "test_tarot1.png",
+    "Effect": "Test Effect for Tarot 1"
+  },
+  {
+    "Name": "Test Tarot Card 2",
+    "Appearance": "test_tarot2.png",
+    "Effect": "Test Effect for Tarot 2"
+  }
+]

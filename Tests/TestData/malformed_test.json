@@ -1,0 +1,13 @@
+[
+  {
+    "Name": "Test Malformed Card 1",
+    "Appearance": "test_malformed1.png",
+    "Effect": "Test Effect for Malformed 1"
+  },
+  {
+    "Name": "Test Malformed Card 2",
+    "Appearance": "test_malformed2.png",
+    "Effect": "Test Effect for Malformed 2"
+  }
+] // Missing comma and invalid trailing characters after array end
+malformed content
