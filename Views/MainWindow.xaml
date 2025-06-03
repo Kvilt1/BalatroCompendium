@@ -11,18 +11,20 @@
         <TabControl Margin="10" ItemsSource="{Binding CardCategories}" SelectedItem="{Binding SelectedCategory}">
             <TabControl.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Key}" FontWeight="Bold" />
+                    <TextBlock Text="{Binding}" FontWeight="Bold" />
                 </DataTemplate>
             </TabControl.ItemTemplate>
             <TabControl.ContentTemplate>
                 <DataTemplate>
-                    <ScrollViewer>
-                        <ItemsControl ItemsSource="{Binding Value}">
+                    <ScrollViewer ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                        <ItemsControl ItemsSource="{Binding DataContext.DisplayedCards, RelativeSource={RelativeSource AncestorType=TabControl}}"
+                                      VirtualizingPanel.IsVirtualizing="True"
+                                      VirtualizingPanel.VirtualizationMode="Recycling">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Border Margin="5" CornerRadius="5" BorderBrush="Gray" BorderThickness="1">
                                         <StackPanel Width="150" MouseEnter="OnMouseEnterCard" MouseLeave="OnMouseLeaveCard">
-                                            <Image Source="{Binding Appearance}" Height="100" />
+                                            <Image Source="{Binding Appearance}" Height="100" DecodePixelHeight="100" />
                                             <TextBlock Text="{Binding Name}" FontWeight="Bold" TextAlignment="Center" />
                                             <TextBlock Text="{Binding Effect}" TextWrapping="Wrap" FontSize="12" />
                                             <!-- Tooltip for descriptions -->
@@ -37,7 +39,7 @@
                             </ItemsControl.ItemTemplate>
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
-                                    <WrapPanel IsItemsHost="True" />
+                                    <VirtualizingStackPanel Orientation="Horizontal" IsItemsHost="True" />
                                 </ItemsPanelTemplate>
                             </ItemsControl.ItemsPanel>
                         </ItemsControl>
